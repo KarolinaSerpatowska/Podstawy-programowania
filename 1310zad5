@@ -1,0 +1,46 @@
+#include <stdio.h>
+
+
+int main()
+{
+    int i;
+    int a,b;
+    do
+    {
+        printf("1.Dodawanie\n 2.Odejmowanie\n 3.Mnozenie\n 4.Dzielenie\n ");
+        scanf("%d", &i);
+            switch(i)
+        {
+            case 1:
+                printf("Podaj a ");
+                scanf("%d", &a);
+                printf("Podaj b ");
+                scanf("%d", &b);
+                printf("%d\n", a+b);
+                break;
+            case 2:
+                printf("Podaj a ");
+                scanf("%d", &a);
+                printf("Podaj b ");
+                scanf("%d", &b);
+                printf("%d\n", a-b);
+                break;
+            case 3:
+                printf("Podaj a ");
+                scanf("%d", &a);
+                printf("Podaj b ");
+                scanf("%d", &b);
+            printf("%d\n", a*b);
+                break;
+            case 4:
+                printf("Podaj a ");
+                scanf("%d", &a);
+                printf("Podaj b ");
+                scanf("%d", &b);
+            printf("%d\n", a/b);
+                break;
+        }
+    }
+    while (i!=0);
+    return 0;
+}
