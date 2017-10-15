@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int main()
+{
+    int liczba,dzielnik;
+
+    scanf("%d", &liczba);
+
+   for (dzielnik=liczba; dzielnik>0; dzielnik--)
+   {
+       if (liczba%dzielnik==0)
+       {
+           printf("%d\n", dzielnik);
+
+       }
+   }
+
+    return 0;
+}
