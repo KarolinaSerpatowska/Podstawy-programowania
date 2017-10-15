@@ -1,0 +1,39 @@
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+
+ float a,b,c,delta,pierwiastek,x1,x2;
+ printf("Podaj wartosc a: ");
+ scanf("%f", &a);
+ printf("Podaj wartosc b: ");
+ scanf("%f", &b);
+ printf("Podaj wartosc c: ");
+ scanf("%f", &c);
+
+ delta=(b*b)-(4*a*c);
+
+ if (delta<0)
+ {
+     printf("Rownanie nie ma pierwiastkow.");
+ }
+    else
+    {
+        if (delta==0)
+        {
+            x1=(-b)/(2*a);
+            printf("Pierwiastek rownania wynosi %f", x1);
+        }
+        else
+        {
+         pierwiastek=sqrt(delta);
+         x1=(-b-pierwiastek)/(2*a);
+         x2=(-b+pierwiastek)/(2*a);
+         printf("Pierwiastki rownania wynosza %f , %f ", x1,x2);
+        }
+    }
+
+
+return 0;
+}
