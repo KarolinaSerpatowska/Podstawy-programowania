@@ -1,0 +1,49 @@
+#include <stdio.h>
+
+int main()
+{
+    float a,b;
+    scanf("%f %f", &a, &b);
+
+    if (a==0 && b==0)
+    {
+        if (b>0 && a==0)
+        {
+            printf("I, II");
+        }
+        else if (b<0 && a==0)
+        {
+            printf("IV, III");
+        }
+        else if (a<0 && b==0)
+        {
+            printf("IV, II");
+        }
+        else if (a>0 && b==0)
+        {
+            printf("I, III");
+        }
+        else
+        {
+            printf("Wykres nie nalezy do zadnej cwiartki");
+        }
+    }
+    else if (a>0 && b>0)
+    {
+        printf("I, III, II");
+    }
+    else if (a<0 && b<0)
+    {
+        printf("IV, III, II");
+    }
+    else if (a>0 && b<0)
+    {
+        printf("I, III, IV");
+    }
+    else
+    {
+     printf("I, II, IV");
+    }
+
+    return 0;
+}
