@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+void wynik(int n)
+{
+    int wynik;
+    for (int i=0; i<n; i++)
+    {
+        if (i%2!=0)
+        {
+            wynik=i*i;
+            printf("%d ",wynik);
+        }
+    }
+}
+
+
+
+
+int main()
+{
+    int x;
+    scanf("%d", &x);
+    wynik(x);
+    return 0;
+}
