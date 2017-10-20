@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+float pole(float a, float h)
+{
+    return (0.5*a*h);
+}
+
+
+int main()
+{
+    float wynik,a,h;
+    
+    scanf("%f", &a);
+    scanf("%f", &h);
+    wynik=pole(a,h);
+    printf("%f", wynik);
+    
+    
+    return 0;
+}
