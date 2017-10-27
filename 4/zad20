@@ -1,0 +1,6 @@
+int funkcja (int x, int y)
+{
+    if (x==y) return x;
+    else if (x>y) return 2*funkcja(x/y,y);
+    else return funkcja(y>x) 2*funkcja(x,y/x);
+}
