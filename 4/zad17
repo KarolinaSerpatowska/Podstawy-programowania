@@ -1,0 +1,15 @@
+int funkcja(int x)
+{
+    int z=0;
+    do
+    {
+        int j=x%10;
+        if (j%3==0)
+        {
+            z++;
+        }
+        x=x/10;
+        }
+    while (x>=0);
+    return z;
+}
