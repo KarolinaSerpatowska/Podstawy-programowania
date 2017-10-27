@@ -1,0 +1,13 @@
+int a (int n)
+{
+    int i;
+    int suma=0;
+    if (n<6) return n;
+    else for (i=1;i<=3; i++)
+    {
+        suma=suma+a(n-2i);
+       
+    }
+    return suma;
+}
+
