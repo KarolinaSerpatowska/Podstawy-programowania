@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+
+int funkcja(int p, int potega)
+{
+    int i,wynik=1;
+    for (i=1; i<=potega; i++)
+    {
+        wynik=wynik*p;
+    }
+    return wynik;
+}
+
+
+
+
+int main()
+{
+    int p,potega;
+    scanf("%d", &p);
+    scanf("%d", &potega);
+    printf("%d",funkcja(p,potega) );
+
+
+    return 0;
+}
