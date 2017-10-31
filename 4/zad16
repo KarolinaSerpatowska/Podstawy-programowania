@@ -1,0 +1,14 @@
+#include <stdio.h>
+#include <math.h>
+int main ()
+{
+    int x,y;
+    scanf("%d %d", &x, &y);
+    if (y<0) y=y*(-1);
+    float cos;
+    cos=1.0*(x/(sqrt((y*y)+(x*x))));
+    printf("wynik= %f", cos);
+
+
+    return 0;
+}
