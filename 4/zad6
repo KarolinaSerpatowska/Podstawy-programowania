@@ -1,0 +1,38 @@
+#include <stdio.h>
+
+unsigned int funkcja(unsigned int q)
+{
+    int y;
+    int i=1;
+    int z;
+    int q1;
+    q=q+1;
+    while(i==1)
+    {
+     y=0;
+        for (z=2; z<q; z++)
+        {
+            if (q%z==0)
+            {
+              y++;
+            }
+        }
+        if (y==0)
+            {
+                i=0;
+            }
+            q1=q;
+        q++;
+    }
+    return q1;
+
+}
+
+
+int main()
+{
+    unsigned int x;
+    scanf("%d", &x);
+    printf("%d", funkcja(x));
+    return 0;
+}
