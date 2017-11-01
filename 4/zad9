@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main()
+{
+    float a,b,c;
+    scanf("%f", &a);
+    scanf("%f", &b);
+    scanf("%f", &c);
+
+    if (((a*a)+(b*b))==(c*c) || ((c*c)+(b*b)==(a*a)) || ((c*c)+(a*a))==(b*b))
+        printf("T");
+    else printf("N");
+
+
+
+    return 0;
+}
