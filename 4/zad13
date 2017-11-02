@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main()
+{
+    int i,suma=0, liczba, wynik;
+    for (i=0; suma<=100; i++)
+    {
+        scanf("%d", &liczba);
+        suma=suma+liczba;
+    }
+    wynik=suma-100;
+    printf("%d", wynik);
+
+    return 0;
+}
+
