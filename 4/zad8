@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <math.h>
+
+int funkcja(int n)
+{
+    double wynik1;
+    int wynik;
+    wynik1=pow(n,(1.0/3.0));
+    wynik=wynik1;
+    return wynik;
+}
+
+
+int main()
+{
+    int n;
+    scanf("%d", &n);
+    printf("%d",funkcja(n));
+    return 0;
+}
