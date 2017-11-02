@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+int funkcja(float cena, float procent, float prog)
+{
+    int wynik=0, z=1;
+    while(z==1)
+    {
+        cena=cena+(cena*(procent/100));
+        wynik++;
+
+        if (cena>=prog)
+            {
+                return wynik;
+                z=0;
+
+        }
+    }
+}
+
+
+int main()
+{
+   float cena, procent, prog;
+   scanf("%f", &cena);
+   scanf("%f", &procent);
+   scanf("%f", &prog);
+    printf("%d", funkcja(cena,procent,prog));
+
+    return 0;
+}
+
