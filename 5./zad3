@@ -10,7 +10,7 @@ int main()
         tablica[i]=x;
         suma=suma+tablica[i];
     }
-srednia=suma/5;
+srednia=suma/i;
 printf("%f\n", suma);
 printf("%f", srednia);
 
