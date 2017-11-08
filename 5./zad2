@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+const int n=80;
+
+void funkcja (int tablica[])
+{
+    int i;
+    for (i=0; i<=n; i++)
+    {
+        if (i%2==0)
+        {
+         tablica[i]=i;
+         printf("%d\n", tablica[i]);
+        }
+    }
+}
+
+
+int main()
+{
+   int tablica[100];
+   funkcja(tablica);
+
+    return 0;
+}
