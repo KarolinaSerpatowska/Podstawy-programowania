@@ -1,0 +1,15 @@
+ #include <stdio.h>
+void f(double tab[], double tab2[], double rozmiar)
+{
+    int i;
+    for (i = 0; i < rozmiar; ++i) {
+        tab2[i] = tab[i];
+        printf("%lf\n", tab2[i]);
+    }
+}
+int main()
+{
+    double tab[] = { 4, 5, 6 }, tab2[3];
+    f(tab, tab2, 3);
+    return 0;
+}
