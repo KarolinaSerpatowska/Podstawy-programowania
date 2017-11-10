@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <string.h>
+
+int f(char napis[])
+{
+    int i;
+    for (i=0; napis[i]; i++);
+    return i;
+}
+
+
+
+int main()
+{
+    char napis[15];
+    scanf("%s", napis);
+    printf("%d", f(napis));
+    
+    return 0;
+}
