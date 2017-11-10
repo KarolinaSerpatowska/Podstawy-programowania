@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include <string.h>
+
+int main()
+{
+    char napis[15];
+    gets(napis);
+    puts(napis);
+    
+    fgets(napis,15,stdin);
+    fputs(napis,stdout);
+    
+    scanf("%s", napis);
+    printf("%s", napis);
+
+    
+    return 0;
+}
