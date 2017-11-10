@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <string.h>
+#include <stdbool.h>
+
+bool f(char napis[], char napis2[])
+{
+    int i;
+    for (i=0; napis[i]; i++);
+    int z,dlugosc=i, n;
+    for (z=0, n=dlugosc-1; z<dlugosc; z++, n--)
+    {
+        if (napis[z]!=napis2[n])
+            return false;
+    }
+    return true;
+}
+
+
+
+int main()
+{
+    char napis[15], napis2[15];
+    scanf("%s", napis);
+    scanf("%s", napis2);
+    printf(f(napis, napis2)?"tak":"nie");
+    
+    return 0;
+}
