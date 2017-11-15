@@ -1,0 +1,12 @@
+int f(int tab[], int rozmiar)
+{
+    int i,j;
+    for (i=0;i<rozmiar;i++)
+    {
+        for (j=0;j<rozmiar;j++)
+        { 
+            if (j == i) continue;
+        if (tab[j]==tab[i]) tab[j]=0;
+        }
+    }
+}
