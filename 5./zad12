@@ -1,0 +1,14 @@
+void f(int tab[], int rozmiar, int a)
+{
+    int i;
+    for (i=0;a>=1 ;i++)
+    {
+        tab[i]=a%2;
+        a=a/2;
+    }
+    int z;
+    for (z=rozmiar-1; z>=0; z--)
+    {
+        printf("%d", tab[z]);
+    }
+}
