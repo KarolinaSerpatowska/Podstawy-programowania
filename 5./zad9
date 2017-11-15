@@ -1,0 +1,16 @@
+void f(int tab[], int rozmiar)
+{
+    int i,max,max2;
+    max=tab[0];
+    for (i=1;i<rozmiar;i++)
+    {
+        if (tab[i]>max)
+        {
+            max2=max;
+            max=tab[i];
+        }
+    }
+    printf("%d", max2);
+
+}
+
