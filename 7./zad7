@@ -1,0 +1,17 @@
+int *f(int *tab1, int tab2, int *tab3, int n)
+{
+    int i;
+    int *tab4=malloc(*sizeof(int*));
+    for(i=0; i<n; i++)
+    {
+        if (*(tab1+i)>=0)
+        {
+            *(tab4+i)=*(tab2+i);
+        }
+        else
+        {
+            *(tab4+i)=*(tab3+i);
+        }
+    }
+    return tab4;
+}
