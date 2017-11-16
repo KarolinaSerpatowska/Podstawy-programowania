@@ -1,0 +1,6 @@
+double *funkcja(double *wsk)
+{
+    free (wsk);
+    wsk=NULL;
+    return wsk;
+}
