@@ -1,0 +1,6 @@
+int *funkcja(int *wsk, int *wsk2)
+{
+    if (wsk>wsk2)
+        return wsk;
+    else return wsk2;
+}
