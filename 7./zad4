@@ -1,0 +1,5 @@
+float *funkcja()
+{
+    float *wsk=malloc(sizeof(float*));
+    return wsk;
+}
