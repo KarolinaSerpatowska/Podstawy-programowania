@@ -1,0 +1,14 @@
+int f(int *x, int *y, int a, int b)
+{
+    int suma,iloczyn;
+    if (x==y)
+    {
+        suma=a+b;
+       return suma;
+    }
+    else
+    {
+        iloczyn=a*b;
+        return iloczyn;
+    }
+}
