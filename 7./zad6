@@ -1,8 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-//min srednia
-
 int main()
 {
     int n;
@@ -13,20 +11,32 @@ int main()
     {
         scanf("%f",tab+i);
     }
-    float suma=0, max;
+    float suma=0, max,min,srednia;
     for (i=0; i<n;i++)
     {
         suma=suma+*(tab+i);
-        if (i==0) max = *tab;
+        if (i==0)
+            {
+                max = *tab;
+                min=*tab;
+        }
         else if (*(tab+i)>max)
         {
             max =*(tab+i);
         }
-        
+        else if (*(tab+i)<min)
+        {
+            min=*(tab+i);
+        }
     }
+
+    srednia=suma/i;
+
     printf ("%f\n", suma);
-    printf ("%f", max);
-    
-    
+    printf ("%f\n", max);
+    printf ("%f\n", srednia);
+    printf ("%f\n", min);
+
+
     return 0;
 }
