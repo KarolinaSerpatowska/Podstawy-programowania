@@ -1,4 +1,4 @@
-int *f(int *tab1, int tab2, int *tab3, int n)
+int *f(int *tab1, int *tab2, int *tab3, int n)
 {
     int i;
     int *tab4=malloc(*sizeof(int*));
