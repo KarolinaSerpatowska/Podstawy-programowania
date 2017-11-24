@@ -1,0 +1,17 @@
+int main()
+{
+    char *napis1, *napis2;
+   
+    napis1= malloc (100*sizeof(char*));
+
+    fgets(napis1, 140, stdin);
+    
+    int i;
+     napis2=strchr(napis1, 'a');
+    for (i=0;;i++)
+    {
+        if (napis2==NULL) break;
+        napis2=strchr(napis2+i, 'a');
+        printf("%s", napis2);
+        
+    }
