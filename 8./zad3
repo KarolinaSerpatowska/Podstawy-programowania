@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+long int f(char *napis)
+{
+    int z;
+    z=atol(napis);
+    return z;
+}
+
+
+
+
+int main()
+{
+    char *napis;
+    fgets(napis,50, stdin);
+    fputs(napis,stdout);
+    
+    long int a;
+    a=f(napis);
+    printf("%ld", a);
+    
+    return 0;
+}
