@@ -3,7 +3,7 @@
 
 int f(char *napis)
 {
-    double z;
+    int z;
     z=atoi(napis);
     return z;
 }
