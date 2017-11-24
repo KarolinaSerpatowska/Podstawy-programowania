@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int compare(const void *a, const void *b)
+{
+    return (*(int *)a-*(int*)b);
+}
+
+
+int main()
+{
+    srand(time(NULL));
+    int arr[100];
+    int i;
+    for (i=0;i<100;i++)
+    {
+        arr[i]=rand();
+        printf("%d\n", arr[i]);
+    }
+    
+    qsort (arr,100,sizeof(int),compare);
+    for (i=0;i<100;i++)
+    {
+        printf("%d\n", arr[i]);
+    }
+    
+    return 0;
+}
