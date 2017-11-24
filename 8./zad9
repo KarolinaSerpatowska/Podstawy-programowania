@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+
+
+int main()
+{
+    char *napis1, *napis2, *napis3;
+    napis3= malloc (100*sizeof(char*));
+    napis2= malloc (100*sizeof(char*));
+    napis1= malloc (100*sizeof(char*));
+    fgets(napis1, 140, stdin);
+    fgets(napis2, 140,stdin);
+    strcpy(napis3, napis1);
+    strcat(napis3, napis2);
+    fputs(napis3, stdout);
+    
+    return 0;
+}
