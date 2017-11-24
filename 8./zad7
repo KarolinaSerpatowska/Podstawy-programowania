@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+
+
+int main()
+{
+    int x,y;
+    scanf("%d", &x);
+    scanf("%d", &y);
+    div_t divresult;
+    divresult =div (x,y);
+    printf("%d\n %d\n", divresult.quot, divresult.rem);
+    
+    return 0;
+}
