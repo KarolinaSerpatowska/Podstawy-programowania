@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+float f(char *napis)
+{
+    float z;
+    z=strtof(napis,NULL);
+    return z;
+}
+
+
+
+
+int main()
+{
+    char *napis;
+    fgets(napis,50, stdin);
+    fputs(napis,stdout);
+    
+    float a;
+    a=f(napis);
+    printf("%f", a);
+    
+    return 0;
+}
