@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int f(char *napis)
+{
+    double z;
+    z=atoi(napis);
+    return z;
+}
+
+
+
+
+int main()
+{
+    char *napis;
+    fgets(napis,50, stdin);
+    fputs(napis,stdout);
+    
+    int a;
+    a=f(napis);
+    printf("%d", a);
+    
+    return 0;
+}
