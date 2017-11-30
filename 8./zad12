@@ -1,0 +1,7 @@
+char *newstring(char *str1, int nr)
+{
+    char *strk;
+    memcpy(strk,str1,nr);
+    
+    return strk;
+}
