@@ -1,0 +1,4 @@
+int str_comp (char *str1, char *str2)
+{
+    return strcmp(str1,str2);
+}
