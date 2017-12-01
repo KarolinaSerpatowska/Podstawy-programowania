@@ -1,0 +1,20 @@
+int f(double **tab, int n, int m)
+{
+    double suma=0;
+    int i,j;
+    for (i=0;i<n;i++)
+    {
+        double suma_biezaca=0;
+        int indeks=0;
+        for (j=0;j<m;j++)
+        {
+            suma=suma+tab[i][j];
+        }
+    }
+    if (suma_biezaca>suma)
+    {
+        suma=suma_biezaca;
+        indeks=i;
+    }
+    return indeks;
+}
