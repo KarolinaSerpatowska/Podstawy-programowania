@@ -1,0 +1,15 @@
+void f(double tab[3][3],tab2[3][3],tab3[3][3], int n,int m)
+{
+    int i,j,k,l;
+    for (i=0;i<n;i++)
+    {
+        for (j=0;j<m;j++)
+        {
+            tab3[i][j]=0;
+            for (k=0;k<m;k++)
+            {
+                tab3[i][j]+=tab1[i][k]*tab[k][j];
+            }
+        }
+    }
+}
