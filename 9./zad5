@@ -1,0 +1,13 @@
+double f(double **tab, int n, int m)
+{
+    double suma=0;
+    int i,j;
+    for (i=0;i<n;i++)
+    {
+        for (j=0;j<m;j++)
+        {
+            suma=suma+tab[i][j];
+        }
+    }
+    return suma;
+}
