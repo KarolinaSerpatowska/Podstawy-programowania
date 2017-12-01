@@ -3,6 +3,7 @@ void f(double **tab, int n, int m)
     int i,j;
     for (i=0;i<n;i++)
     {
+    tab[i]=0;
         for (j=0;j<m;j++)
         {
             tab[i][j]=0;
