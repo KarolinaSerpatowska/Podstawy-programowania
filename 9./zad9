@@ -1,0 +1,115 @@
+#include <stdio.h>
+
+int n;
+void wprowadz (int n, double tab[n][n]);
+void wypisz (int n, double tab[n][n]);
+double wyznacznik(int n, double m1[n][n]);
+void minor(int k1, int n, double m1[n][n], double m2[n-1][n-1]);
+int potega(int k1);
+
+int main()
+{
+printf("Podaj wymiar \n");
+scanf("%d",&n);
+
+double a[n][n];
+double b[n][n];
+
+if (n>0)
+   {
+   wprowadz(n, a);
+   wypisz(n, a);
+  printf("Wartosc wyznacznika wynosi: %lf\n",wyznacznik(n, a));
+   }
+else
+    {
+    printf("Wymiar wyznacznika musi być > 0 \n");
+    }
+
+int i,j;
+   int tabt[n][n];
+   for (i=0;i<n;i++)  //transponowanie
+   {
+       for (j=0;j<n;j++)
+       {
+           tabt[i][j]=a[j][i];
+       }
+   }
+
+return 0;
+}
+
+
+//Funkcja do wprowadzenia elementów macierzy
+void wprowadz (int n, double tab[n][n])
+{
+     printf("Wprowadzanie wyrazow macierzy\n");
+     int i,j;
+     for (i=0; i<n; i++)
+     {
+         for (j=0; j<n; j++)
+         {
+             printf("Wprowadz wyraz %d, %d: ",i+1,j+1);
+             scanf("%lf",&tab[i][j]);
+         }
+     }
+}
+
+//Funkcja wypisująca macierz
+void wypisz (int n, double tab[n][n])
+{
+     printf("\n");
+     int i,j;
+     for (i=0; i<n; i++)
+     { for (j=0; j<n; j++)
+       {
+       printf("%lf ", tab[i][j]);
+       }
+       printf("\n");
+       }
+}
+
+//Funkcja obliczająca wartość wyznacznika
+double wyznacznik(int n, double m1[n][n])
+{
+ int k1;
+ double m2[n-1][n-1];
+ double det=0;
+
+       if (n==1) return m1[0][0];
+       else
+       {
+           for (k1=0; k1<n; k1++)
+           {
+               minor(k1, n, m1, m2);
+               det = det + potega(k1) * m1[0][k1] * wyznacznik(n-1,m2);
+           }
+       }
+return det;
+}
+
+
+//Funkcja obliczająca minor z macierzy
+void minor(int k1, int n, double m1[n][n], double m2[n-1][n-1])
+{
+int u,v;
+    for(v=0; v<n-1; v++)
+         {
+             for(u=0; u<k1; u++)
+                 {
+                 m2[v][u] = m1[v+1][u];
+                 }
+             for(u=k1+1; u<n; u++)
+                 {
+                 m2[v][u-1] = m1[v+1][u];
+                 }
+         }
+}
+
+//Funkcja obliczająca potęgę (-1)^(i+j)
+int potega(int k1)
+{
+if ((k1%2)==1) return -1;
+else return 1;
+
+}
