@@ -1,0 +1,20 @@
+int *f(int **tab, int n)
+{
+    int i,j,z=0;
+    int iloczyn=1;
+    iloczyn=tab[0][0];
+    for (i=0; i<n; i++)
+    {
+        iloczyn=iloczyn*tab[i][i];
+        for (j=0;j<n;j++)
+        {
+
+         }
+    }
+    int **tabdyn=malloc(iloczyn*sizeof(int**));
+    for (i=0;i<n;i++)
+    {
+        tabdyn[i]=malloc(iloczyn*sizeof(int *));
+    }
+    return tabdyn;
+}
