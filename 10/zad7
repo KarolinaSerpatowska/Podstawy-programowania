@@ -1,0 +1,56 @@
+#include <stdio.h>
+
+int porownanie(int a, int b)
+{
+    return a&b;
+}
+
+int main()
+{
+    int j;
+    int ip[4];
+    int maska[4];
+    
+    scanf("%d.%d.%d.%d %d.%d.%d.%d", &ip[0], &ip[1], &ip[2], &ip[3], &maska[0], &maska[1], &maska[2], &maska[3]);
+    
+    int adres_sieci[4];
+    int rozgloszeniowy[4];
+    
+    int i=0;
+    for (i=0; i<4; i++)
+    {
+        adres_sieci[i]=porownanie(ip[i], maska[i]);
+    }
+    printf("\n adres sieci: %d.%d.%d.%d", adres_sieci[0], adres_sieci[1], adres_sieci[2], adres_sieci[3]);
+  
+    for (i=0; i<4; i++)
+    {
+        rozgloszeniowy[i]=0;
+        for(j=0; j<8;j++)
+        {
+            if (~maska[i]&(1<<j) || adres_sieci[i]&(1<<j))
+            {
+                rozgloszeniowy[i]|=1<<j;
+            }
+        }
+
+    }
+    printf("\n adres broadcast: %d.%d.%d.%d", rozgloszeniowy[0], rozgloszeniowy[1], rozgloszeniowy[2], rozgloszeniowy[3]);
+    
+   int hosty,licznik;
+    for (i=0; i<4; i++)
+    {
+        for(j=0; j<8;j++)
+        {
+            if (maska[i]&(1<<j))
+            {
+                licznik++;
+            }
+        }
+    }
+        hosty=(1<<(32-licznik))-2;
+
+    printf(" %d", hosty);
+    
+    return 0;
+}
