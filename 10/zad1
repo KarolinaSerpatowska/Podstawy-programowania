@@ -1,0 +1,4 @@
+int parzysta (int a)
+{
+    return a&1;
+}
