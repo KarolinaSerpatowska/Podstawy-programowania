@@ -1,0 +1,4 @@
+int zad5(int a)
+{
+    return 1<<a;
+}
