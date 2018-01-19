@@ -1,0 +1,52 @@
+#include <stdio.h>
+#include <string.h>
+
+typedef struct alkohole
+{
+    char *nazwa;
+    float procenty;
+    int ilosc;
+    
+}al;
+
+al *najbardziej_trujacy(al *alkohol, int n)
+{
+    int i;
+    int index=0;
+    int poziom_zatrucia=alkohol[0].procenty*alkohol[0].ilosc;
+    for (i=0; i<n; i++)
+    {
+        if (poziom_zatrucia<alkohol[i].procenty*alkohol[i].ilosc)
+        {
+            index=i;
+            poziom_zatrucia=alkohol[i].procenty*alkohol[i].ilosc;
+        }
+    }
+    return &alkohol[index];
+}
+
+
+
+
+
+int main()
+{
+    al alkohol[4];
+    alkohol[0].nazwa="perelka";
+    alkohol[0].procenty=0.05;
+    alkohol[0].ilosc=2500;
+    alkohol[1].nazwa="absynt";
+    alkohol[1].procenty=0.8;
+    alkohol[1].ilosc=250;
+    alkohol[2].nazwa="wino";
+    alkohol[2].procenty=0.13;
+    alkohol[2].ilosc=500;
+    alkohol[3].nazwa="metaxa";
+    alkohol[3].ilosc=500;
+    alkohol[3].procenty=0.44;
+    
+    printf("%s",najbardziej_trujacy(alkohol,4)->nazwa);
+    
+    
+    return 0;
+}
