@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <math.h>
+
+typedef struct punkt
+{
+    float x;
+    float y;
+    float z;
+}pun;
+
+float odlegolosc(pun a, pun b)
+{
+    float wyn;
+    wyn=sqrt((a.x-b.x)*(a.x-b.x)+(a.y-b.y)*(a.y-b.y)+(a.z-b.z)*(a.z-b.z));
+    return wyn;
+}
+
+
+int main()
+{
+    pun a={2,3,4}, b={1,2,5};
+    printf("%f\n",odlegolosc(a,b));
+    
+    
+    
+    
+    return 0;
+}
