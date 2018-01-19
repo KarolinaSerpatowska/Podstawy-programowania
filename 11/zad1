@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+struct trojkat
+{
+    int dlugosc1;
+    int dlugosc2;
+    int dlugosc3;
+};
+
+int obwod(int a, int b, int c)
+{
+    return a+b+c;
+}
+
+
+int main()
+{
+    struct trojkat dl;
+    scanf("%d",&dl.dlugosc1);
+    scanf("%d",&dl.dlugosc2);
+    scanf("%d",&dl.dlugosc3);
+    printf("%d", obwod(dl.dlugosc1,dl.dlugosc2,dl.dlugosc3));
+    
+    return 0;
+}
