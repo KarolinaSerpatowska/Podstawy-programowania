@@ -1,0 +1,45 @@
+#include <stdio.h>
+#include <math.h>
+
+typedef struct liczba_zespolona
+{
+  int a;
+  int b;
+}z;
+
+double modul(z *liczba_zespolona)
+{
+    double modul;
+    modul=sqrt((liczba_zespolona->a*liczba_zespolona->a)+(liczba_zespolona->b*liczba_zespolona->b));
+    return modul;
+}
+
+void suma (z *l, z *l2)
+{
+    int suma1;
+    int suma2;
+    suma1=l->a+l2->a;
+    suma2=l->b+l2->b;
+    printf("\nsuma: %d + %di", suma1, suma2);
+}
+
+void iloczyn (z *l, z *l2)
+{
+    int iloczyn1;
+    int iloczyn2;
+    iloczyn1=l->a*l2->a-l->b*l2->b;
+    iloczyn2=l->a*l2->b+l2->a*l->b;
+    printf("\niloczyn: %d + %di", iloczyn1, iloczyn2);
+}
+
+
+int main()
+{
+    z liczba ={1,2};
+    z liczba2 = {3,4};
+    printf("modul: %lf", modul(&liczba));
+    suma(&liczba, &liczba2);
+    iloczyn(&liczba, &liczba2);
+
+    return 0;
+}
