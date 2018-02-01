@@ -17,6 +17,10 @@ int main()
    double a=5;
     printf("%lf", funkcja(a, cos));
     
+     double (*f)(double);
+    f=cos;
+    printf("%lf", f(8.5));
+    
     
     return 0;
 }
