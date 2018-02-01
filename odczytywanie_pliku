@@ -1,0 +1,57 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+typedef struct Mate{
+    char name[50];
+    char surname[50];
+    int age;
+    float IQindex;
+} fren;
+
+int main (int argc, char** argv)
+{
+    if (argc<1)
+    {
+        printf("Podaj nazwe pliku zrodlowego");
+        exit(1);
+    }
+    FILE *f1;
+    f1 = fopen (argv[1],"r");
+    if (!f1)
+    {
+        perror ("cos poszlo nie tik tak");
+        exit(1);
+    }
+    char imie[50];
+    char nazwisko[50];
+    int wiek;
+    float iloraz;
+    fren* tab;
+    int i=0;
+    while (fscanf(f1,"%s %s %d %f",imie,nazwisko,&wiek,&iloraz)!=EOF)
+    {
+        
+        i++;
+        if(i == 1)
+        {
+            tab=malloc(1*sizeof(fren));
+        }
+        else
+        {
+            tab=realloc(tab,(i+1)*sizeof(fren));
+        }
+        strcpy(tab[i].name,imie);
+        strcpy(tab[i].surname,nazwisko);
+        tab[i].age = wiek;
+        tab[i].IQindex=iloraz;
+
+    }
+
+    int j;
+    for (j=i;j>=0;j--){
+        printf("%s %s %d %f\n",tab[j].name,tab[j].surname,tab[j].age,tab[j].IQindex);
+    }
+        fclose(f1);
+    return 0;
+}
