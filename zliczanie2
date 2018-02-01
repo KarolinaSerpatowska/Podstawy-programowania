@@ -1,0 +1,47 @@
+#include <stdio.h>
+#include <stdbool.h>
+
+bool porownaj(char *a, char *b, int n)
+{
+    int n;
+    for (i=0;i<n;i++)
+    {
+      if (a[i]!=b[i])
+      {
+          return false;
+      }
+    }
+    return true;
+}
+
+
+
+int jacek(char *liczba,char *liczba2, int n)
+{
+    int i,j,licznik;
+    for (i=0;liczba[i+n-1]!='\0';i++)
+    {
+        for(j=0;liczba2[j+n-1]!='\0';j++)
+        {
+            if (porownaj(liczba+i, liczba2+j))
+            {
+                licznik++;
+            }
+        }
+    }
+    return licznik;
+}
+
+
+
+
+
+int main()
+{
+    
+    printf("%d", jacek("1011001011", "011",2));
+    
+    
+    
+    return 0;
+}
