@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+double funkcja(double a, double (*nazwa_Funckji)(double))
+{
+    return a+nazwa_Funckji(a);
+}
+
+double cos(double a)
+{
+    return a*2;
+}
+
+
+int main()
+{
+    
+   double a=5;
+    printf("%lf", funkcja(a, cos));
+    
+    
+    return 0;
+}
